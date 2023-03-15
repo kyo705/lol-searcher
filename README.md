@@ -13,14 +13,14 @@
  프로젝트 주요 컴포넌트
  ------------------
  
-### 1. 웹 서버(Nginx)
+### [1. 웹 서버(Nginx)](https://github.com/kyo705/lol-searcher/wiki/Nginx)
   - 리버스 프록시 역할로 로드밸런싱, 요청 처리율 제한, 캐싱 용도로 사용
 
-### 2. WAS1 : LOL-SEARCHER(Tomcat, Spring MVC)
+### [2. WAS1 : LOL-SEARCHER(Tomcat, Spring MVC)](https://github.com/kyo705/LolSearcher#lolsearcher)
   - 서블릿 기반 웹 애플리케이션 서버
   - 트랜잭션 보장이 필요한 서비스를 호출하는 용도
  
-### 3. WAS2 : LOL-SEARCHER-REACTIVE(Netty, Spring Reactor)
+### [3. WAS2 : LOL-SEARCHER-REACTIVE(Netty, Spring Reactor)](https://github.com/kyo705/Lolsearcher-reactive#lolsearcher-reactive)
   - Java NIO 기반 이벤트 루프 웹 애플리케이션 서버
   - 빈번한 서버 간 통신이 필요한 서비스를 호출하는 용도
   - 게임 서버로부터 데이터를 수집하는 역할
@@ -28,10 +28,10 @@
 ### 4. 웹 보안(Spring Security)
   - WAS1, WAS2에 적용해 웹 보안 설정(CSRF, XSS, CORS, Session Fixation ...)
 
-### 5. Kafka & Kafka Consumer Apps
+### [5. Kafka & Kafka Consumer Apps](https://github.com/kyo705/lol-searcher/wiki/Kafka-Consumer-Apps)
   - LOL-SEARCHER-REACTIVE에서 발생한 데이터를 필터링 및 가공해 DB에 저장하는 용도
 
-### 6. Batch App
+### [6. Batch App](https://github.com/kyo705/lolsearcher-data-batch#lolsearcher-data-batch)
   - DB에 저장된 데이터를 가공해 DB 및 Redis(sorted set)에 저장
   
 ### 7. Notification Server(설계 예정)
